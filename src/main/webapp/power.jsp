@@ -5,9 +5,11 @@ pageEncoding="UTF-8"%>
 <jsp:include page="header.jsp"/>
 <div class="container">
 <h1>${name}</h1><br>
+<progress value='${powerlevel}' max='9000'></progress>
 <%
 int powerlevel = (Integer) request.getAttribute("powerlevel");
 String rank = (String) request.getAttribute("rank");
+
 if(powerlevel < 2000){
 %>
 <p style="font-size:32px;font-weight:bold;color:red">
